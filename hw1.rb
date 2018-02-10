@@ -1,22 +1,23 @@
 def squared_sum(a, b)
   # Q1 CODE HERE
-
+  sum = a+b
+  sum*sum
 end
 
 def sort_array_plus_one(a)
   # Q2 CODE HERE
-
+  a.sort.map! {|i| i=i+1}
 end
 
 def combine_name(first_name, last_name)
   # Q3 CODE HERE
-
+  first_name + " " + last_name
 end
 
 def blockin_time(a)
   # DO NOT EDIT THIS CODE BELOW
   require './foobar'
-  Foobar.baz a
+  Foobar.baz a 
 end
 
 def scrabble(word)
@@ -49,4 +50,5 @@ def scrabble(word)
     z: 10,
   }
   # Q5 CODE HERE
+  word.chars.inject(0) {|sum, w| sum+values[w.to_sym]}
 end
